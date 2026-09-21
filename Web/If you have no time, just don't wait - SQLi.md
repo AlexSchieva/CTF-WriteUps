@@ -73,7 +73,7 @@ while True:
 ```
 Facendo girare il codice ottengo il seguente risultato:
 
-![[Pasted image 20260921150524.png]]
+![Risultato](img/screenshot01.png)
 
 Come si vede, all'interno del db è presente la tabella *qua_trovi_la_tua_flag*, quindi ora basta ineittare la query per ottenere la flag da quella tabella:
 ``` sql
