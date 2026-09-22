@@ -7,10 +7,11 @@ tags:
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]
+* **Sezione:** [Software Security]
 * **Difficoltà:** [Facile]
 * **Sfida:** `nc intagram.challs.olicyber.it 10101`
 ## 2. Allegati
-La sfida dà in allegato il codice del programma, e un comando da inserire nel terminale per connettersi da remoto alla challenge (`nc intagram.challs.olicyber.it 10101`)
+La sfida dà in allegato il codice del programma:
 ```C
 // gcc -Wall -fno-stack-protector -o intagram_generator src.c
 
@@ -83,7 +84,7 @@ int main() {
 
 }
 ```
-## 2. Analisi delle vulnerabilità
+## 3. Analisi delle vulnerabilità
 Il programma chiede di inserire un numero da 1 a 10 per generare una frase. All'inizio del file contenente il codice C si vede un commento:
 `// gcc -Wall -fno-stack-protector -o intagram_generator src.c`
 Indica molto probabilmente come è stato compilato il programma, e si nota in particolare l'opzione **-fno-stack-protector**, che indica che è stata disabilitata l'opzione di sicurezza chiamata **_Stack Canary_**, che serve a rilevare ed evitare attacchi di **Buffer Overflow**. 
@@ -109,7 +110,7 @@ printf(system_strings[3], frasi[index]);
 ```
 La variabile **_choice_** è di tipo **unsigned short**. Nel momento in cui passo un negativo alla funzione **scanf**, questo viene interpretato come un **unsigned short** (%hu): non sapendo come gestire il segno meno, lo interpreta come un numero positivo (ad esempio _-3_ lo converte in **65533**, perchè fa il giro (underflow)). Siccome **_choice_** è un numero positivo, il programma esce dal ciclo e si ritrova a fare un **cast** di choice a **short**. Il numero che prima era stato interpretato come numero positivo senza segno, ora viene interpretato come **short con segno**, quindi diventa, prendendo l'esempio di poco fa, **-3**. 
 Nell'istruzione dopo, nella **printf**, verrà passato un indice **negativo** all'array **_frasi_**. In C questo comporta che dall'indirizzo di partenza di quell'array andrà a leggere in memoria ciò che è allocato prima di quell'array, facendo dei "salti" all'indietro. Ciò può essere sfruttato per leggere la flag che si trova nell'array allocato prima di **_frasi_**.
-## 3. Exploitation
+## 4. Exploitation
 Quando il programma chiede di inserire un numero da 1 a 10, inserendo -3 viene letta la flag dall'array **_system_strings_** partendo dall'inizio dell'indirizzo di memoria di **_frasi_**. Infatti:
 ```
 [ INDIRIZZI ALTI ] 

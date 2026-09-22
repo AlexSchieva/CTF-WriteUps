@@ -7,6 +7,7 @@ tags:
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]
+* **Sezione:** [Web Security]
 * **Difficoltà:** [Media] 
 * **Risorsa:** [http://sn4ck-sh3nan1gans.challs.olicyber.it](http://sn4ck-sh3nan1gans.challs.olicyber.it)
 

@@ -1,5 +1,5 @@
 ---
-titolo: "Write-up: Hidden Variable - Binary"
+titolo: Hidden Variable - Binary
 data: 2026-09-23
 categoria: Binary
 tags:
@@ -7,6 +7,7 @@ tags:
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]
+* **Sezione:** [Software Security]
 * **Difficoltà:** [Facile] 
 ## 2. Analisi delle vulnerabilità
 La challenge richiede di trovare una variabile nascosta. Se si analizza il file con Ghidra e si controlla la cartella **_exports_**, che contiene tutte le variabili globali che non sono state dichiarate come **_static_**, si trova una variabile chiamata **_fl4g_** 

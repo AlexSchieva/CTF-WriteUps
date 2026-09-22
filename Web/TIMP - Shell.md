@@ -7,6 +7,7 @@ tags:
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]
+* **Sezione:** [Web Security]
 * **Difficoltà:** [Media] 
 * **Risorsa:** [http://timp.challs.olicyber.it](http://timp.challs.olicyber.it)
 

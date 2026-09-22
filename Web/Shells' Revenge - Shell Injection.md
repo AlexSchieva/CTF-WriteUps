@@ -8,6 +8,7 @@ tags:
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]
+* **Sezione:** [Web Security]
 * **Difficoltà:** [Media] 
 * **Risorsa:** [http://shellrevenge.challs.olicyber.it](http://shellrevenge.challs.olicyber.it)
 

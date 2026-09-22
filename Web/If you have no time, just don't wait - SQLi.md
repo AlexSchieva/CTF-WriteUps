@@ -8,6 +8,7 @@ tags:
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]
+* **Sezione:** [Web Security]
 * **Difficoltà:** [Media] 
 * **Risorsa:** [http://no-time.challs.olicyber.it](http://no-time.challs.olicyber.it)
 
@@ -73,7 +74,7 @@ while True:
 ```
 Facendo girare il codice ottengo il seguente risultato:
 
-![Risultato](img/screenshot01.png)
+![Risultato](Web/img/screenshot01.png)
 
 Come si vede, all'interno del db è presente la tabella *qua_trovi_la_tua_flag*, quindi ora basta ineittare la query per ottenere la flag da quella tabella:
 ``` sql
