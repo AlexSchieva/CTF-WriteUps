@@ -10,7 +10,7 @@ tags:
 * **Difficoltà:** [Media] 
 * **Risorsa:** [http://timp.challs.olicyber.it](http://timp.challs.olicyber.it)
 
-## 1. Allegati
+## 2. Allegati
 In allegato alla sfida c'era il seguente codice php, chiamato _handler.php_
 ```php
 <?php 
@@ -65,7 +65,7 @@ In allegato alla sfida c'era il seguente codice php, chiamato _handler.php_
 ?>
 ```
 
-## 2. Analisi delle vulnerabilità
+## 3. Analisi delle vulnerabilità
 Il file in allegato sopra è il codice php della pagina che vediamo, ovvero il terminale con la mucca parlante. In particolare si nota come blocchi i caratteri speciali tramite una **regex**, oltre che vari comandi da **terminale** (quali _head_, _tail_, _cat_, etc...). L'unico comando che permette di eseguire è **_cowsay_**, che permette di far dire alla mucca parlante ciò che è seguito dopo quel comando tra le virgolette ( " ). 
 Questa è la riga in cui accetta il comando _cowsay_
 ```php
@@ -73,7 +73,7 @@ if($str && !empty($str))
 	$result = passthru('cowsay "'.addslashes($str).'"');
 ```
 La funzione **_passthru_** esegue comandi del teminale restituendo l'output direttamente al browser, mentra **_addslashes_** mette \ davanti a caratter specifici: ( ' ), ( " ), ( \ ) e il Byte NUL. La vulnerabilità sta proprio in questa funzione: si può infatti sfruttare una **command substitution**, che consiste nel sostituire la stringa passata come parametro a cowsay con **$(...)**, dove dentro le parentesi si mette un qualsiasi comando terminale. In questo modo, quando viene eseguito il comando cowsay, prima viene notata la sostituzione (ovvero il dollaro con le parentesi) e viene eseguito il comando che si trova lì dentro. 
-## 3. Exploitation
+## 4. Exploitation
 Si digita nel terminale della pagina web il seguente comando per cercare il file _flag.txt_ (come suggerito dalla challenge, la flag si trova lì dentro):
 ```
 cowsay "$(find . -name flag.txt)"
