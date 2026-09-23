@@ -1,9 +1,9 @@
 ---
-titolo: "Write-up: Intagram Generator - (Binary)"
+titolo: Intagram Generator
 data: 2026-09-24
 categoria: Binary
 tags:
-  - out_of_bounds_read
+  - buffer_overflow
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]

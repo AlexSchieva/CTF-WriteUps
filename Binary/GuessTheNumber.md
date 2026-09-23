@@ -1,9 +1,9 @@
 ---
-titolo: "Write-up: GuessTheNumber - (Binary)"
+titolo: GuessTheNumber
 data: 2026-09-24
 categoria: Binary
 tags:
-  - overflow
+  - buffer_overflow
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]

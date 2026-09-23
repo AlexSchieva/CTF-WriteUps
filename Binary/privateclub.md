@@ -1,10 +1,10 @@
 ---
-titolo: "Write-up: privateclub - (Binary)"
+titolo: privateclub
 data: 2026-09-24
 categoria: Binary
 tags:
-  - overflow
   - scanf
+  - buffer_overflow
 ---
 ## 1. Informazioni Generali
 * **Piattaforma:** [olicyber.training.it]
